@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisasi Pengeluaran & Anggaran</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Visualisasi Pengeluaran</h1>
+
+        <div class="balance-card">
+            <h3>Saldo Total</h3>
+            <p id="total-balance">Rp 0</p>
+        </div>
+
+        <div class="card">
+            <h3>Tambah Transaksi</h3>
+            <form id="transaction-form">
+                <input type="text" id="name" placeholder="Nama Barang (misal: Nasi Goreng)" required>
+                <input type="number" id="amount" placeholder="Jumlah (misal: 15000)" required>
+                <select id="category" required>
+                    <option value="">Pilih Kategori</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Transportasi">Transportasi</option>
+                    <option value="Hiburan">Hiburan</option>
+                </select>
+                <button type="submit">Tambah</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Bagan Pengeluaran</h3>
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>Daftar Transaksi</h3>
+            <ul id="transaction-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
